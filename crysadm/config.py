@@ -3,7 +3,7 @@
 # config.py - configration for crysadm web and redis server
 __author__ = 'powergx'
 
-# Redis·şÎñÆ÷ÅäÖÃ
+# RedisæœåŠ¡å™¨é…ç½®
 class RedisConfig():
     def __init__(self, host, port, db, password=None):
         self.host = host
@@ -11,7 +11,7 @@ class RedisConfig():
         self.db = db
         self.password = password
 
-# Crysadm ÅäÖÃ
+# Crysadm é…ç½®
 class Config(object):
     DEBUG = False
     TESTING = False
@@ -23,19 +23,19 @@ class Config(object):
     PASSWORD_PREFIX = "08b3db21-d510-11e4-9ttd-10ddb199c373"
     ENCRYPT_PWD_URL = None
     SERVER_IP = '127.0.0.1'
-    SERVER_PORT = 5036
+    SERVER_PORT = 4000
 
-# Õı³£ÔËĞĞÊ±ÅäÖÃ
+# æ­£å¸¸è¿è¡Œæ—¶é…ç½®
 class ProductionConfig(Config):
     DEBUG = False
     TESTING = False
 
-# ¿ª·¢ÕßÅäÖÃÄ£Ê½
+# å¼€å‘è€…é…ç½®æ¨¡å¼
 class DevelopmentConfig(Config):
     DEBUG = True
     TESTING = False
 
-# ²âÊÔÄ£Ê½
+# æµ‹è¯•æ¨¡å¼
 class TestingConfig(Config):
     DEBUG = True
     TESTING = True
